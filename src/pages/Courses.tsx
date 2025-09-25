@@ -195,25 +195,42 @@ const Courses = () => {
       skills: ['SQL Queries', 'Joins & Subqueries', 'Indexes', 'Stored Procedures', 'Database Design']
     },
     {
-      id: 12,
-      title: 'Power BI Data Analytics',
-      description: 'A complete course on data analytics using Power BI. Learn data modeling, report creation, DAX functions, and creating interactive dashboards.',
-      price: '4499 INR',
-      originalPrice: '10000 INR',
-      duration: '4 Weeks',
-      students: '30+',
-      lessons: '28+',
-      image: 'https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg',
-      icon: TrendingUp, // Using TrendingUp for business/analytics
-      level: 'Intermediate',
-      category: 'Data Science',
-      rating: 4.8,
-      instructor: 'Kailas Manickam',
-      skills: ['Data Modeling', 'DAX', 'Power Query', 'Data Visualization', 'Report Publishing', 'Dashboard Creation']
-    }
-  ];
+      id: 12,
+      title: 'Power BI Data Analytics',
+      description: 'A complete course on data analytics using Power BI. Learn data modeling, report creation, DAX functions, and creating interactive dashboards.',
+      price: '4499 INR',
+      originalPrice: '10000 INR',
+      duration: '4 Weeks',
+      students: '30+',
+      lessons: '28+',
+      image: 'https://images.pexels.com/photos/95916/pexels-photo-95916.jpeg',
+      icon: TrendingUp, // Using TrendingUp for business/analytics
+      level: 'Intermediate',
+      category: 'Data Science',
+      rating: 4.8,
+      instructor: 'Kailas Manickam',
+      skills: ['Data Modeling', 'DAX', 'Power Query', 'Data Visualization', 'Report Publishing', 'Dashboard Creation']
+    },
+    {
+      id: 13,
+      title: 'Microsoft Office Mastery',
+      description: 'A complete course to master the Microsoft Office , including Word, Excel, and PowerPoint. Boost your productivity and professional skills.',
+      price: '2499 INR',
+      originalPrice: '5000 INR',
+      duration: '4 Weeks',
+      students: '5+',
+      lessons: '15+',
+      image: 'https://images.pexels.com/photos/340152/pexels-photo-340152.jpeg?auto=compress&cs=tinysrgb&w=600',
+      icon: BookOpen,
+      level: 'Beginner',
+      category: 'Productivity',
+      rating: 4.5,
+      instructor: 'Kayalvizhi',
+      skills: ['MS Word', 'MS Excel', 'MS PowerPoint', 'Data Entry', 'Document Formatting', 'Presentation Design']
+    }
+  ];
 
-  const categories = ['All', 'Programming', 'Data Science', 'AI/ML', 'Web Development', 'Marketing', 'Finance', 'Database'];
+  const categories = ['All', 'Programming', 'Data Science', 'AI/ML', 'Web Development', 'Marketing', 'Finance', 'Database', 'Productivity'];
 
   // 🔽 rest of your component code stays the same
 
@@ -449,6 +466,11 @@ const Courses = () => {
                         </Link>
                       ) : course.id === 12 ? (
                         <Link to="/courses/power-bi-data-analytics" className="flex items-center">
+                          Enroll Now
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                        </Link>
+                      ) : course.id === 13 ? (
+                        <Link to="/courses/microsoft-office-mastery" className="flex items-center">
                           Enroll Now
                           <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                         </Link>

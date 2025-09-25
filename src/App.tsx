@@ -23,6 +23,7 @@ import RProgrammingCourse from './pages/RProgramming';
 import PythonLibrariesCourse from './pages/PythonLibraries';
 import MySQLCourse from './pages/Mysql';
 import PowerBICourse from './pages/PowerBI';
+import MSOfficeCourse from './pages/MSOfficeCourse';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             <Route path="/courses/python-libraries-mastery" element={<PythonLibrariesCourse/>} />
             <Route path="/courses/mysql-database-masterclass" element={<MySQLCourse/>} />
             <Route path="/courses/power-bi-data-analytics" element={<PowerBICourse/>} />
+            <Route path="/courses/microsoft-office-mastery" element={<MSOfficeCourse/>} />
             
           </Routes>
         </main>
