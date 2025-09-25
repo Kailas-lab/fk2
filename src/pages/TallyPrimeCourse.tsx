@@ -183,7 +183,7 @@ const TallyPrimeCourse = () => {
             {/* Content */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center px-4 py-2 bg-green-900/50 rounded-full text-green-400 text-sm font-medium mb-6 backdrop-blur-sm border border-green-800">
-                
+                <img src='/logo.webp' alt="Future Key" className="h-4 w-auto mr-2" />
                 TallyPrime Accounting & GST
               </div>
               

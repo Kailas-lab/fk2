@@ -178,7 +178,7 @@ const AutomationCourse = () => {
             {/* Content */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center px-4 py-2 bg-indigo-900/50 rounded-full text-indigo-400 text-sm font-medium mb-6 backdrop-blur-sm border border-indigo-800">
-                
+                <img src='/logo.webp' alt="Future Key" className="h-4 w-auto mr-2" />
                 Python Automation & Scripting
               </div>
               
