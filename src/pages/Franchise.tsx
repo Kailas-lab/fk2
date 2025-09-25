@@ -196,7 +196,7 @@ const Franchise = () => {
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center px-4 py-2 bg-purple-900/50 rounded-full text-purple-400 text-sm font-medium mb-6 backdrop-blur-sm border border-purple-800">
                 <img
-                  src="/fk_final_logo_key.png"
+                  src="/logo.webp"
                   alt="Future Key"
                   className="h-4 w-auto mr-2"
                 />
@@ -698,7 +698,7 @@ const Franchise = () => {
               </a>
 
               <div className="text-sm text-gray-400">
-                📞 Call us: +91 8680870950 | 📧 Email: Kailas.manickam8@gmail.com
+                📞 Call us: +91 8680870950 | 📧 Email: futurekeyeduservices@gmail.com
               </div>
             </div>
 

@@ -6,14 +6,14 @@ const About = () => {
     {
       name: 'Kailas Manickam',
       role: 'Founder & Lead Instructor',
-      image: '/k.jpeg',
+      image: '/k.webp',
       bio: 'Microsoft certified power bi developer, 2+ years in software development, Data Analytics and education with a passion for teaching.',
       specialties: ['Power BI', 'MS Excel', 'Python', 'AI/ML']
     },
     {
       name: 'Kayalvizhi N',
       role: 'Managing Director',
-      image: '/kk.jpeg',
+      image: '/kk.webp',
       bio: 'Visionary leader with 3+ years of experience in strategic planning and business development. Passionate about innovation and growth.',
       specialties: ['Business Strategy', 'Financial Planning', 'Operations']
     },
@@ -42,7 +42,7 @@ const About = () => {
     {
       "name": "Aarthi",
       "role": "Tally Prime Instructor",
-      "image": "/a.jpeg",
+      "image": "/a.webp",
       "bio": "Experienced instructor specializing in Tally Prime. Helps students master accounting principles and software functionalities for career success.",
       "specialties": ["Tally Prime", "Accounting", "GST", "Payroll"]
     }
