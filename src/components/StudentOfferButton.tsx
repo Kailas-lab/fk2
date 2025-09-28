@@ -1,33 +1,38 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { GraduationCap, X, Sparkles, ArrowRight } from 'lucide-react';
+import { GraduationCap, Sparkles, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const StudentOfferButton = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const popupRef = useRef(null);
 
+  // The custom animation duration is 0.5s for closing, and the timeout must match.
   const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
       setShowPopup(false);
       setIsClosing(false);
-    }, 500); // match closing animation duration
+    }, 500); // <-- This matches the 0.5s (500ms) animation-out duration
   };
 
   // Close on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (popupRef.current && !popupRef.current.contains(e.target)) {
+      // Check if the click is outside the popup and the popup is currently visible
+      if (showPopup && popupRef.current && !popupRef.current.contains(e.target)) {
         handleClose();
       }
     };
-    if (showPopup) {
-      document.addEventListener("mousedown", handleClickOutside);
-    }
+    
+    // Always attach the listener when the component mounts, and conditionally
+    // check `showPopup` in the callback for cleaner cleanup.
+    document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [showPopup]);
+  }, [showPopup]); // Dependency on showPopup is fine, but the logic inside useEffect is now cleaner
 
   return (
     <>
@@ -42,10 +47,12 @@ const StudentOfferButton = () => {
         {/* Tooltip */}
         <div className="absolute bottom-full left-0 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
           Special Student Offer!
+          {/* Tooltip arrow */}
           <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
         </div>
         
         {/* Pulse Animation */}
+        {/* Note: Inset-0 and opacity-20 on a background div creates the halo effect */}
         <div className="absolute inset-0 bg-emerald-500 rounded-full animate-ping opacity-20"></div>
         
         {/* Notification Badge */}
@@ -59,24 +66,10 @@ const StudentOfferButton = () => {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
           <div
             ref={popupRef}
-            className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 max-w-md w-full border border-emerald-500/30 shadow-2xl transform ${
-              isClosing ? 'animate-bounce-out' : 'animate-bounce-in'
-            }`}
+            className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-8 max-w-md w-full border border-emerald-500/30 shadow-2xl transform 
+              ${isClosing ? 'animate-bounce-out' : 'animate-bounce-in'}
+            `}
           >
-            {/* Close Button
-            <button
-              onClick={handleClose}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors duration-300 hover:bg-gray-700 rounded-full"
-            >
-              <X className="h-5 w-5" />
-            </button> */}
-
-            {/* Animated Background Elements */}
-            <div className="absolute inset-0 overflow-hidden rounded-3xl">
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-emerald-500/20 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-10 -left-10 w-24 h-24 bg-green-400/20 rounded-full animate-pulse delay-1000"></div>
-            </div>
-
             {/* Content */}
             <div className="relative z-10 text-center">
               {/* Icon */}
@@ -128,14 +121,14 @@ const StudentOfferButton = () => {
 
               {/* CTA Buttons */}
               <div className="space-y-3">
-                <a
-                  href="/courses"
+                <Link
+                  to="/courses"
                   onClick={handleClose}
                   className="w-full px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-400 text-white rounded-xl font-semibold hover:from-emerald-600 hover:to-green-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-emerald-500/25 flex items-center justify-center"
                 >
                   Claim Student Offer
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                </Link>
                 
                 <button
                   onClick={handleClose}
@@ -149,51 +142,9 @@ const StudentOfferButton = () => {
                 Limited time offer • Valid student ID required • Terms apply
               </p>
             </div>
-
-            {/* Floating Animation Elements */}
-            <div className="absolute top-6 left-6 animate-float">
-              <span className="text-2xl">📚</span>
-            </div>
-            <div className="absolute bottom-6 right-6 animate-float-delayed">
-              <span className="text-2xl">🎯</span>
-            </div>
           </div>
         </div>
       )}
-
-      <style jsx>{`
-        @keyframes bounce-in {
-          0% { transform: scale(0.3) rotate(12deg); opacity: 0; }
-          50% { transform: scale(1.05) rotate(-3deg); }
-          70% { transform: scale(0.9) rotate(1deg); }
-          100% { transform: scale(1) rotate(0deg); opacity: 1; }
-        }
-        @keyframes bounce-out {
-          0% { transform: scale(1) rotate(0deg); opacity: 1; }
-          50% { transform: scale(0.9) rotate(3deg); }
-          100% { transform: scale(0.3) rotate(-12deg); opacity: 0; }
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        @keyframes float-delayed {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-8px); }
-        }
-        .animate-bounce-in {
-          animation: bounce-in 0.6s ease-out forwards;
-        }
-        .animate-bounce-out {
-          animation: bounce-out 0.5s ease-in forwards;
-        }
-        .animate-float {
-          animation: float 3s ease-in-out infinite;
-        }
-        .animate-float-delayed {
-          animation: float-delayed 3s ease-in-out infinite 1.5s;
-        }
-      `}</style>
     </>
   );
 };
