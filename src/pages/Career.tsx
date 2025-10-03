@@ -265,7 +265,7 @@ const Career = () => {
           <div className="flex flex-col items-center justify-center bg-gray-800 rounded-2xl p-6 lg:p-12 border border-gray-700">
             <div className="w-full lg:w-3/4">
               <img
-                src="/cert.webp"
+                src="FK_Course_Certificate.webp"
                 alt="Course Completion Certificate"
                 className="w-full h-auto rounded-xl shadow-lg"
               />

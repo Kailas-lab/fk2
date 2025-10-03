@@ -21,7 +21,7 @@ const Accreditations = () => {
       title: 'Government Approved',
       description: 'Approved by Ministry of Skill Development & Entrepreneurship for vocational training programs.',
       icon: CheckCircle,
-      badge: 'MSDE Approved',
+      badge: 'MSME Approved',
       color: 'from-emerald-500 to-emerald-600'
     }
   ];
