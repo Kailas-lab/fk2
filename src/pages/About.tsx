@@ -27,14 +27,14 @@ const About = () => {
     {
       name: 'Abhishek C',
       role: 'Digital Marketing Expert',
-      image: 'https://media.licdn.com/dms/image/v2/D4D03AQHIRSrV8IXzOQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724171060777?e=1761177600&v=beta&t=jb9mp3id5XJSu7zoUGG4pPkOk9rtQCjKahE9wP-3Wi0',
+      image: 'https://media.licdn.com/dms/image/v2/D4D03AQHIRSrV8IXzOQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724171060768?e=1766016000&v=beta&t=ncrhqRLveLCiUMrx11DNGmAKh891w7mpyH_SI7Q1bQA',
       bio: 'Marketing strategist with 4+ years experience. Helped 100+ businesses grow their online presence.',
       specialties: ['SEO', 'Social Media', 'Content Strategy']
     },
     {
       name: 'Prasanth',
       role: 'UI/UX Developer',
-      image: 'https://media.licdn.com/dms/image/v2/D5603AQEfJ3JoNrNFAA/profile-displayphoto-shrink_400_400/B56Zd.PTOKHUAo-/0/1750169630020?e=1761177600&v=beta&t=gLBU_xUqFJqqZdn5orf1v-Z07zD4p5uWLTpcGOlwZ18',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQEfJ3JoNrNFAA/profile-displayphoto-shrink_200_200/B56Zd.PTOKHUAg-/0/1750169630001?e=1766016000&v=beta&t=htTgzK-9RtJBxwRAH8NXEaqZ9_J2tLD4e2ONkC6haX4',
       bio: 'Senior UI/UX developer with expertise in modern web technologies. Built applications for Fortune 500 companies.',
       specialties: ['Figma', 'Adobe Premire Pro', 'After Effets']
     }
