@@ -109,7 +109,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://media.licdn.com/dms/image/v2/D5622AQEBGikRYaW3AA/feedshare-shrink_1280/B56ZkqDbncHUAs-/0/1757347171316?e=1761177600&v=beta&t=9UQAYxpCwxkMbGQFsYtVC6OZd5Q98BFJg-_1IK5zTws"
+                src="https://media.licdn.com/dms/image/v2/D4D33AQE_954aFnhRmA/productpage-image_1128_635/B4DZkvJAkzIYAM-/0/1757432518472?e=1764752400&v=beta&t=-5xPRNQ3PPKzsvoHJKQoMPvhw0PQw7JKdM1ugJsj7cU"
                 alt="Students learning"
                 className="rounded-2xl shadow-2xl"
               />
