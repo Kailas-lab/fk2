@@ -88,7 +88,7 @@ const FullStackCourse = () => {
 
   const syllabus = [
     {
-      day: 1,
+      Week: 1,
       title: 'Frontend Development',
       icon: Code,
       image: 'https://images.pexels.com/photos/221043/pexels-photo-221043.jpeg',
@@ -101,7 +101,7 @@ const FullStackCourse = () => {
       handsOn: 'Portfolio website, interactive web pages, responsive layouts'
     },
     {
-      day: 2,
+      Week: 2,
       title: 'Backend Development with Django',
       icon: Server,
       image: 'https://images.pexels.com/photos/330771/pexels-photo-330771.jpeg',
@@ -114,7 +114,7 @@ const FullStackCourse = () => {
       handsOn: 'Blog application, user management system, admin dashboard'
     },
     {
-      day: 3,
+      Week: 3,
       title: 'Database & API Development',
       icon: Database,
       image: 'https://images.pexels.com/photos/3584996/pexels-photo-3584996.jpeg',
@@ -127,7 +127,7 @@ const FullStackCourse = () => {
       handsOn: 'E-commerce database, REST API creation, API integration'
     },
     {
-      day: 4,
+      Week: 4,
       title: 'Deployment & Production',
       icon: Globe,
       image: 'https://images.pexels.com/photos/5632379/pexels-photo-5632379.jpeg',
@@ -187,7 +187,7 @@ const FullStackCourse = () => {
                 <span className="text-white">Build Complete Web Apps in</span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                  Just 4 Weeks
+                  Just 3 Months
                 </span>
               </h1>
               
@@ -196,15 +196,15 @@ const FullStackCourse = () => {
               </p>
               
               <p className="text-lg text-gray-400 mb-8">
-                2 Hours per Day | Django Framework | Cloud Deployment
+                2 Hours per Week | Django Framework | Cloud Deployment
               </p>
 
               {/* Price */}
               <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
-                <div className="text-4xl font-bold text-blue-400">₹3499</div>
-                <div className="text-2xl text-gray-500 line-through">₹8000</div>
+                <div className="text-4xl font-bold text-blue-400">₹9,999</div>
+                <div className="text-2xl text-gray-500 line-through">₹25,000</div>
                 <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                  56% OFF
+                  60% OFF
                 </div>
               </div>
 
@@ -212,7 +212,7 @@ const FullStackCourse = () => {
               <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 text-blue-400 mr-2" />
-                  Just 4 Saturdays
+                  Just 4 Months
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Users className="h-5 w-5 text-blue-400 mr-2" />
@@ -263,7 +263,7 @@ const FullStackCourse = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Course Syllabus –
               <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-                {' '}4 Days Complete Training On Weekends
+                {' '}4 Weeks Complete Training 
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -272,18 +272,18 @@ const FullStackCourse = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {syllabus.map((day, index) => {
-              const Icon = day.icon;
+            {syllabus.map((Week, index) => {
+              const Icon = Week.icon;
               return (
                 <div
-                  key={day.day}
+                  key={Week.Week}
                   className="bg-gray-800 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 overflow-hidden"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="relative h-48">
                     <img
-                      src={day.image}
-                      alt={`Day ${day.day} - ${day.title}`}
+                      src={Week.image}
+                      alt={`Week ${Week.Week} - ${Week.title}`}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
@@ -295,10 +295,10 @@ const FullStackCourse = () => {
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex items-center space-x-3 mb-2">
                         <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          Day {day.day}
+                          Week {Week.Week}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white">{day.title}</h3>
+                      <h3 className="text-2xl font-bold text-white">{Week.title}</h3>
                     </div>
                   </div>
 
@@ -306,7 +306,7 @@ const FullStackCourse = () => {
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-3">Topics Covered:</h4>
                       <ul className="space-y-2">
-                        {day.topics.map((topic, i) => (
+                        {Week.topics.map((topic, i) => (
                           <li key={i} className="flex items-start text-gray-300 text-sm">
                             <CheckCircle className="h-4 w-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" />
                             {topic}
@@ -317,7 +317,7 @@ const FullStackCourse = () => {
 
                     <div className="bg-gray-700 p-4 rounded-xl">
                       <h4 className="text-blue-400 font-semibold mb-2 text-sm">Hands-on Practice:</h4>
-                      <p className="text-gray-300 text-sm">{day.handsOn}</p>
+                      <p className="text-gray-300 text-sm">{Week.handsOn}</p>
                     </div>
                   </div>
                 </div>
@@ -389,7 +389,7 @@ const FullStackCourse = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Duration</h4>
-                      <p className="text-gray-300 text-sm">4 Saturdays, 2 hours per day</p>
+                      <p className="text-gray-300 text-sm">4 Weeks, 2 hours per Week</p>
                     </div>
                   </div>
 
@@ -429,10 +429,10 @@ const FullStackCourse = () => {
                   <div className="text-center">
                     <div className="text-sm text-blue-400 font-medium mb-2">Special Launch Price</div>
                     <div className="flex items-center justify-center space-x-4 mb-2">
-                      <span className="text-3xl font-bold text-white">₹3499</span>
-                      <span className="text-xl text-gray-400 line-through">₹8000</span>
+                      <span className="text-3xl font-bold text-white">₹9,999</span>
+                      <span className="text-xl text-gray-400 line-through">₹25,000</span>
                     </div>
-                    <div className="text-sm text-gray-300">Save ₹4501 (56% discount)</div>
+                    <div className="text-sm text-gray-300">Save ₹15,001 (60% discount)</div>
                   </div>
                 </div>
               </div>
@@ -577,7 +577,7 @@ const FullStackCourse = () => {
                 href="#enrollment-form"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full font-semibold text-lg hover:from-blue-600 hover:to-cyan-500 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-blue-500/50 flex items-center"
               >
-                Enroll Now - ₹3499
+                Enroll Now - ₹9,999
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               
@@ -589,7 +589,7 @@ const FullStackCourse = () => {
             <div className="mt-8 flex items-center justify-center space-x-8 text-gray-400 text-sm">
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                7-day money back guarantee
+                7-Week money back guarantee
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />

@@ -100,7 +100,7 @@ const PowerBICourse = () => {
 
   const syllabus = [
     {
-      day: 1,
+      Week: 1,
       title: 'Power BI Fundamentals & Data Preparation',
       icon: Database,
       image: 'https://images.pexels.com/photos/577210/pexels-photo-577210.jpeg',
@@ -113,7 +113,7 @@ const PowerBICourse = () => {
       handsOn: 'Importing and cleaning a raw sales dataset'
     },
     {
-      day: 2,
+      Week: 2,
       title: 'Data Modeling & DAX',
       icon: Layers,
       image: 'https://images.pexels.com/photos/3183170/pexels-photo-3183170.jpeg',
@@ -126,7 +126,7 @@ const PowerBICourse = () => {
       handsOn: 'Building a robust data model and writing simple DAX formulas'
     },
     {
-      day: 3,
+      Week: 3,
       title: 'Report & Dashboard Design',
       icon: LayoutDashboard,
       image: 'https://images.pexels.com/photos/97080/pexels-photo-97080.jpeg',
@@ -139,7 +139,7 @@ const PowerBICourse = () => {
       handsOn: 'Designing an interactive sales performance dashboard'
     },
     {
-      day: 4,
+      Week: 4,
       title: 'Sharing & Advanced Topics',
       icon: Cloud,
       image: 'https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg',
@@ -208,15 +208,15 @@ const PowerBICourse = () => {
               </p>
               
               <p className="text-lg text-gray-400 mb-8">
-                4 Days Intensive | Data Modeling, DAX & more | Hands-on Projects
+                4 Weeks Intensive | Data Modeling, DAX & more | Hands-on Projects
               </p>
 
               {/* Price */}
               <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
-                <div className="text-4xl font-bold text-green-400">₹4499</div>
-                <div className="text-2xl text-gray-500 line-through">₹10000</div>
+                <div className="text-4xl font-bold text-green-400">₹7,999</div>
+                <div className="text-2xl text-gray-500 line-through">₹18000</div>
                 <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                  55% OFF
+                  65% OFF
                 </div>
               </div>
 
@@ -224,7 +224,7 @@ const PowerBICourse = () => {
               <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 text-green-400 mr-2" />
-                  4 Saturdays
+                  4 Weeks
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Users className="h-5 w-5 text-green-400 mr-2" />
@@ -275,7 +275,7 @@ const PowerBICourse = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Course Syllabus –
               <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
-                {' '}4 Days Intensive Training On Weekends
+                {' '}4 Weeks Intensive Training On Weekends
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -284,18 +284,18 @@ const PowerBICourse = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {syllabus.map((day, index) => {
-              const Icon = day.icon;
+            {syllabus.map((Week, index) => {
+              const Icon = Week.icon;
               return (
                 <div
-                  key={day.day}
+                  key={Week.Week}
                   className="bg-gray-800 rounded-2xl border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:scale-105 overflow-hidden"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="relative h-48">
                     <img
-                      src={day.image}
-                      alt={`Day ${day.day} - ${day.title}`}
+                      src={Week.image}
+                      alt={`Week ${Week.Week} - ${Week.title}`}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
@@ -307,10 +307,10 @@ const PowerBICourse = () => {
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex items-center space-x-3 mb-2">
                         <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          Day {day.day}
+                          Week {Week.Week}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white">{day.title}</h3>
+                      <h3 className="text-2xl font-bold text-white">{Week.title}</h3>
                     </div>
                   </div>
 
@@ -318,7 +318,7 @@ const PowerBICourse = () => {
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-3">Topics Covered:</h4>
                       <ul className="space-y-2">
-                        {day.topics.map((topic, i) => (
+                        {Week.topics.map((topic, i) => (
                           <li key={i} className="flex items-start text-gray-300 text-sm">
                             <CheckCircle className="h-4 w-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {topic}
@@ -329,7 +329,7 @@ const PowerBICourse = () => {
 
                     <div className="bg-gray-700 p-4 rounded-xl">
                       <h4 className="text-green-400 font-semibold mb-2 text-sm">Hands-on Practice:</h4>
-                      <p className="text-gray-300 text-sm">{day.handsOn}</p>
+                      <p className="text-gray-300 text-sm">{Week.handsOn}</p>
                     </div>
                   </div>
                 </div>
@@ -401,7 +401,7 @@ const PowerBICourse = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Duration</h4>
-                      <p className="text-gray-300 text-sm">4 Saturdays, 2 hours per day</p>
+                      <p className="text-gray-300 text-sm">4 Weeks, 2 hours per Week</p>
                     </div>
                   </div>
 
@@ -441,10 +441,10 @@ const PowerBICourse = () => {
                   <div className="text-center">
                     <div className="text-sm text-green-400 font-medium mb-2">Special Launch Price</div>
                     <div className="flex items-center justify-center space-x-4 mb-2">
-                      <span className="text-3xl font-bold text-white">₹4499</span>
-                      <span className="text-xl text-gray-400 line-through">₹10000</span>
+                      <span className="text-3xl font-bold text-white">₹7,999</span>
+                      <span className="text-xl text-gray-400 line-through">₹18000</span>
                     </div>
-                    <div className="text-sm text-gray-300">Save ₹5501 (55% discount)</div>
+                    <div className="text-sm text-gray-300">Save ₹10,001 (65% discount)</div>
                   </div>
                 </div>
               </div>
@@ -589,7 +589,7 @@ const PowerBICourse = () => {
                 href="#enrollment-form"
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-400 text-white rounded-full font-semibold text-lg hover:from-green-600 hover:to-emerald-500 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-green-500/50 flex items-center"
               >
-                Enroll Now - ₹4499                <ArrowRight className="ml-2 h-5 w-5" />
+                Enroll Now - ₹7,999                <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               
               <div className="text-sm text-gray-400">
@@ -600,7 +600,7 @@ const PowerBICourse = () => {
             <div className="mt-8 flex items-center justify-center space-x-8 text-gray-400 text-sm">
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                7-day money back guarantee
+                7-Week money back guarantee
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" />

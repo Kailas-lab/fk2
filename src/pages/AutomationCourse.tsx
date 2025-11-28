@@ -87,7 +87,7 @@ const AutomationCourse = () => {
 
   const syllabus = [
     {
-      day: 1,
+      Week: 1,
       title: 'Automation Fundamentals',
       icon: Settings,
       image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -100,7 +100,7 @@ const AutomationCourse = () => {
       handsOn: 'File organizer script, system monitoring tool, automated backup system'
     },
     {
-      day: 2,
+      Week: 2,
       title: 'Web Scraping & Data Extraction',
       icon: Globe,
       image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -113,7 +113,7 @@ const AutomationCourse = () => {
       handsOn: 'Price monitoring bot, news aggregator, social media scraper'
     },
     {
-      day: 3,
+      Week: 3,
       title: 'Advanced Automation',
       icon: Zap,
       image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -126,7 +126,7 @@ const AutomationCourse = () => {
       handsOn: 'Automated report generator, email notification system, database sync tool'
     },
     {
-      day: 4,
+      Week: 4,
       title: 'GUI Applications & Deployment',
       icon: Code,
       image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
@@ -195,15 +195,15 @@ const AutomationCourse = () => {
               </p>
               
               <p className="text-lg text-gray-400 mb-8">
-                2 Hours per Day | Advanced Python | Real Automation Projects
+                2 Hours per Week | Advanced Python | Real Automation Projects
               </p>
 
               {/* Price */}
               <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
-                <div className="text-4xl font-bold text-indigo-400">₹2499</div>
-                <div className="text-2xl text-gray-500 line-through">₹5000</div>
+                <div className="text-4xl font-bold text-indigo-400">₹6499</div>
+                <div className="text-2xl text-gray-500 line-through">₹15000</div>
                 <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                  50% OFF
+                  56% OFF
                 </div>
               </div>
 
@@ -211,7 +211,7 @@ const AutomationCourse = () => {
               <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 text-indigo-400 mr-2" />
-                  Just 4 Saturdays
+                  Just 4 SaturWeeks
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Users className="h-5 w-5 text-indigo-400 mr-2" />
@@ -227,7 +227,7 @@ const AutomationCourse = () => {
                 href="#enrollment-form"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-400 text-white rounded-full font-semibold text-lg hover:from-indigo-600 hover:to-purple-500 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-indigo-500/50"
               >
-                Enroll Today
+                Enroll ToWeek
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </div>
@@ -262,7 +262,7 @@ const AutomationCourse = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Course Syllabus –
               <span className="bg-gradient-to-r from-indigo-400 to-purple-300 bg-clip-text text-transparent">
-                {' '}4 Days Advanced Training On Weekends
+                {' '}4 Weeks Advanced Training
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -271,18 +271,18 @@ const AutomationCourse = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {syllabus.map((day, index) => {
-              const Icon = day.icon;
+            {syllabus.map((Week, index) => {
+              const Icon = Week.icon;
               return (
                 <div
-                  key={day.day}
+                  key={Week.Week}
                   className="bg-gray-800 rounded-2xl border border-gray-700 hover:border-indigo-500/50 transition-all duration-300 hover:scale-105 overflow-hidden"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="relative h-48">
                     <img
-                      src={day.image}
-                      alt={`Day ${day.day} - ${day.title}`}
+                      src={Week.image}
+                      alt={`Week ${Week.Week} - ${Week.title}`}
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent"></div>
@@ -294,10 +294,10 @@ const AutomationCourse = () => {
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className="flex items-center space-x-3 mb-2">
                         <span className="bg-indigo-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          Day {day.day}
+                          Week {Week.Week}
                         </span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white">{day.title}</h3>
+                      <h3 className="text-2xl font-bold text-white">{Week.title}</h3>
                     </div>
                   </div>
 
@@ -305,7 +305,7 @@ const AutomationCourse = () => {
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-3">Topics Covered:</h4>
                       <ul className="space-y-2">
-                        {day.topics.map((topic, i) => (
+                        {Week.topics.map((topic, i) => (
                           <li key={i} className="flex items-start text-gray-300 text-sm">
                             <CheckCircle className="h-4 w-4 text-indigo-400 mr-2 mt-0.5 flex-shrink-0" />
                             {topic}
@@ -316,7 +316,7 @@ const AutomationCourse = () => {
 
                     <div className="bg-gray-700 p-4 rounded-xl">
                       <h4 className="text-indigo-400 font-semibold mb-2 text-sm">Hands-on Practice:</h4>
-                      <p className="text-gray-300 text-sm">{day.handsOn}</p>
+                      <p className="text-gray-300 text-sm">{Week.handsOn}</p>
                     </div>
                   </div>
                 </div>
@@ -388,7 +388,7 @@ const AutomationCourse = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Duration</h4>
-                      <p className="text-gray-300 text-sm">4 Saturdays, 2 hours per day</p>
+                      <p className="text-gray-300 text-sm">4 Weeks, 2 hours per Week</p>
                     </div>
                   </div>
 
@@ -428,10 +428,10 @@ const AutomationCourse = () => {
                   <div className="text-center">
                     <div className="text-sm text-indigo-400 font-medium mb-2">Advanced Course Price</div>
                     <div className="flex items-center justify-center space-x-4 mb-2">
-                      <span className="text-3xl font-bold text-white">₹2499</span>
-                      <span className="text-xl text-gray-400 line-through">₹5000</span>
+                      <span className="text-3xl font-bold text-white">₹6499</span>
+                      <span className="text-xl text-gray-400 line-through">₹15000</span>
                     </div>
-                    <div className="text-sm text-gray-300">Save ₹2501 (50% discount)</div>
+                    <div className="text-sm text-gray-300">Save ₹8501 (56% discount)</div>
                   </div>
                 </div>
               </div>
@@ -576,7 +576,7 @@ const AutomationCourse = () => {
                 href="#enrollment-form"
                 className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-400 text-white rounded-full font-semibold text-lg hover:from-indigo-600 hover:to-purple-500 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-indigo-500/50 flex items-center"
               >
-                Enroll Now - ₹2499
+                Enroll Now - ₹6,499
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               
@@ -588,7 +588,7 @@ const AutomationCourse = () => {
             <div className="mt-8 flex items-center justify-center space-x-8 text-gray-400 text-sm">
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-indigo-400 mr-2" />
-                7-day money back guarantee
+                7-Week money back guarantee
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-indigo-400 mr-2" />

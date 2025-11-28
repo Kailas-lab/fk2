@@ -189,7 +189,7 @@ const DataScienceCourse = () => {
                 <span className="text-white">Master Data Science in</span>
                 <br />
                 <span className="bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text text-transparent">
-                  Just 4 weeks
+                  Just 3 Months
                 </span>
               </h1>
               
@@ -203,10 +203,10 @@ const DataScienceCourse = () => {
 
               {/* Price */}
               <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
-                <div className="text-4xl font-bold text-purple-400">₹7999</div>
-                <div className="text-2xl text-gray-500 line-through">₹15000</div>
+                <div className="text-4xl font-bold text-purple-400">₹11,999</div>
+                <div className="text-2xl text-gray-500 line-through">₹25,000</div>
                 <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                  54% OFF
+                  52% OFF
                 </div>
               </div>
 
@@ -214,7 +214,7 @@ const DataScienceCourse = () => {
               <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 text-purple-400 mr-2" />
-                  Just 4 Saturdays
+                  Just 30 Days
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Users className="h-5 w-5 text-purple-400 mr-2" />
@@ -265,7 +265,7 @@ const DataScienceCourse = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Course Syllabus –
               <span className="bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text text-transparent">
-                {' '}4 Days Intensive Training On Weekends
+                {' '}4 Weeks Intensive Training 
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -391,7 +391,7 @@ const DataScienceCourse = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Duration</h4>
-                      <p className="text-gray-300 text-sm">4 Saturdays, 2 hours per day</p>
+                      <p className="text-gray-300 text-sm">3 Months, 2 hours per day</p>
                     </div>
                   </div>
 
@@ -431,10 +431,10 @@ const DataScienceCourse = () => {
                   <div className="text-center">
                     <div className="text-sm text-purple-400 font-medium mb-2">Special Launch Price</div>
                     <div className="flex items-center justify-center space-x-4 mb-2">
-                      <span className="text-3xl font-bold text-white">₹7999</span>
-                      <span className="text-xl text-gray-400 line-through">₹15000</span>
+                      <span className="text-3xl font-bold text-white">₹11,999</span>
+                      <span className="text-xl text-gray-400 line-through">₹25,000</span>
                     </div>
-                    <div className="text-sm text-gray-300">Save ₹7001 (54% discount)</div>
+                    <div className="text-sm text-gray-300">Save ₹13,001 (52% discount)</div>
                   </div>
                 </div>
               </div>
@@ -579,7 +579,7 @@ const DataScienceCourse = () => {
                 href="#enrollment-form"
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-400 text-white rounded-full font-semibold text-lg hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-purple-500/50 flex items-center"
               >
-                Enroll Now - ₹7999
+                Enroll Now - ₹11,999
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               

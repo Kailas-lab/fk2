@@ -4,24 +4,24 @@ import { Award, Shield, CheckCircle } from 'lucide-react';
 const Accreditations = () => {
   const accreditations = [
     {
-      title: 'ISO 9001:2015 Certified',
+      title: 'StartUP TN: STN90219',
       description: 'Quality Management System certification ensuring consistent, high-quality education delivery.',
       icon: Award,
-      badge: 'ISO 9001:2015',
+      badge: 'StartUP TN',
       color: 'from-blue-500 to-blue-600'
     },
     {
-      title: 'NASSCOM Recognized',
-      description: 'Recognized by National Association of Software and Service Companies for excellence in IT training.',
+      title: 'AICTE Internships Approved',
+      description: 'Our internship training program is listed on AICTE Internship portal.',
       icon: Shield,
-      badge: 'NASSCOM',
+      badge: 'AICTE',
       color: 'from-green-500 to-green-600'
     },
     {
-      title: 'Government Approved',
+      title: 'MSME: UDYAM-TN-03-0287711',
       description: 'Approved by Ministry of Skill Development & Entrepreneurship for vocational training programs.',
       icon: CheckCircle,
-      badge: 'MSME Approved',
+      badge: 'Government Approved',
       color: 'from-emerald-500 to-emerald-600'
     }
   ];

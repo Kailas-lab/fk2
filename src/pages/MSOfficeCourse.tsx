@@ -156,10 +156,10 @@ import React, { useState } from 'react';
                  4-week program | Excel, Word, PowerPoint & Teams | Hands-on Projects
                </p>
                <div className="flex items-center justify-center lg:justify-start space-x-4 mb-8">
-                 <div className="text-4xl font-bold text-indigo-400">₹2499</div>
-                 <div className="text-2xl text-gray-500 line-through">₹5000</div>
+                 <div className="text-4xl font-bold text-indigo-400">₹4,499</div>
+                 <div className="text-2xl text-gray-500 line-through">₹10000</div>
                  <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                   50%OFF
+                   52%OFF
                  </div>
                </div>
                <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
@@ -365,10 +365,10 @@ import React, { useState } from 'react';
                    <div className="text-center">
                      <div className="text-sm text-indigo-400 font-medium mb-2">Special Launch Price</div>
                      <div className="flex items-center justify-center space-x-4 mb-2">
-                       <span className="text-3xl font-bold text-white">₹2499</span>
-                       <span className="text-xl text-gray-400 line-through">₹5000</span>
+                       <span className="text-3xl font-bold text-white">₹4,499</span>
+                       <span className="text-xl text-gray-400 line-through">₹10000</span>
                      </div>
-                     <div className="text-sm text-gray-300">Save ₹2501 (50%discount)</div>
+                     <div className="text-sm text-gray-300">Save ₹5,501 (52%discount)</div>
                    </div>
                  </div>
                </div>
@@ -504,8 +504,7 @@ import React, { useState } from 'react';
                  href="#enrollment-form"
                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-violet-400 text-white rounded-full font-semibold text-lg hover:from-indigo-600 hover:to-violet-500 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-indigo-500/50 flex items-center"
                >
-                 Enroll Now - ₹2499
-                 <ArrowRight className="ml-2 h-5 w-5" />
+                 Enroll Now - ₹4,499                 <ArrowRight className="ml-2 h-5 w-5" />
                </a>
                <div className="text-sm text-gray-400">
                  💳 Secure payment | 📞 24/7 support | 🎓 Certificate included
