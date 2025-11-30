@@ -214,7 +214,7 @@ const PythonCourse = () => {
               <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 text-emerald-400 mr-2" />
-                  Just 4 Saturdays
+                  Just 4 Weeks
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Users className="h-5 w-5 text-emerald-400 mr-2" />
@@ -391,7 +391,7 @@ const PythonCourse = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Duration</h4>
-                      <p className="text-gray-300 text-sm">4 Saturdays, 2 hours per day</p>
+                      <p className="text-gray-300 text-sm">4 Weekends, 2 hours per day</p>
                     </div>
                   </div>
 

@@ -90,7 +90,7 @@ const StudentPopup = () => {
           {/* Description */}
           <p className="text-gray-300 mb-6 leading-relaxed">
             All our premium courses are now available at a special student price of just
-            <span className="text-emerald-400 font-bold text-xl"> ₹999</span>
+            <span className="text-emerald-400 font-bold text-xl"> ₹2,999</span>
           </p>
 
           {/* Features */}

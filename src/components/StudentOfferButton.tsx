@@ -92,10 +92,10 @@ const StudentOfferButton = () => {
                 <div className="text-center">
                   <div className="text-sm text-emerald-400 font-medium mb-2">Special Student Price</div>
                   <div className="flex items-center justify-center space-x-4 mb-2">
-                    <span className="text-4xl font-bold text-white">₹999</span>
-                    <span className="text-xl text-gray-400 line-through">₹2499</span>
+                    <span className="text-4xl font-bold text-white">₹2,999</span>
+                    <span className="text-xl text-gray-400 line-through">₹(Any Price)</span>
                   </div>
-                  <div className="text-sm text-gray-300">Save ₹1500 (60% discount)</div>
+                  <div className="text-sm text-gray-300">Save Upto 80% discount</div>
                 </div>
               </div>
 

@@ -275,7 +275,7 @@ const PowerBICourse = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Course Syllabus –
               <span className="bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
-                {' '}4 Weeks Intensive Training On Weekends
+                {' '}4 Weeks Intensive Training with PL 300 Support
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">

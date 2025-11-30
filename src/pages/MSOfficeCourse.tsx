@@ -211,7 +211,7 @@ import React, { useState } from 'react';
              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                Course Syllabus –
                <span className="bg-gradient-to-r from-indigo-400 to-violet-300 bg-clip-text text-transparent">
-                 {' '}4 Weeks to Office Proficiency
+                 {' '}Just 4 Weekends to Office Proficiency
                </span>
              </h2>
              <p className="text-xl text-gray-300 max-w-2xl mx-auto">

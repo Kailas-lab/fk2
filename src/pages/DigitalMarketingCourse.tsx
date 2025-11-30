@@ -211,7 +211,7 @@ const DigitalMarketingCourse = () => {
               <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 text-orange-400 mr-2" />
-                  WeekWeeks / Weekends
+                   Weekdays / Weekends
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Users className="h-5 w-5 text-orange-400 mr-2" />

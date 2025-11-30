@@ -215,7 +215,7 @@ const GenAICourse = () => {
               <div className="flex flex-col sm:flex-row gap-6 mb-8 justify-center lg:justify-start">
                 <div className="flex items-center text-gray-300">
                   <Clock className="h-5 w-5 text-indigo-400 mr-2" />
-                  Just 4 SaturWeeks
+                  Just 4  Weeks
                 </div>
                 <div className="flex items-center text-gray-300">
                   <Users className="h-5 w-5 text-indigo-400 mr-2" />
@@ -266,7 +266,7 @@ const GenAICourse = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Course Syllabus –
               <span className="bg-gradient-to-r from-indigo-400 to-violet-300 bg-clip-text text-transparent">
-                {' '}4 Weeks Intensive Training On weekends
+                {' '}4 Weeks Intensive Training
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -392,7 +392,7 @@ const GenAICourse = () => {
                     </div>
                     <div>
                       <h4 className="text-white font-semibold">Duration</h4>
-                      <p className="text-gray-300 text-sm">4 SaturWeeks, 2 hours per Week</p>
+                      <p className="text-gray-300 text-sm">4  Weeks, 2 hours per Week</p>
                     </div>
                   </div>
 
