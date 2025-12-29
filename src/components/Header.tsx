@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-
+import { Menu, X, ExternalLink, Loader2 } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isConnecting, setIsConnecting] = useState(false); // For smooth transition state
   const location = useLocation();
 
   const navLinks = [
@@ -19,6 +19,19 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Professional Smooth Redirect Function
+  const handleCRMClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsConnecting(true);
+    
+    // Short delay (600ms) makes the transition feel intentional and "premium"
+    setTimeout(() => {
+      window.open("https://crmfk.netlify.app/", "_blank", "noopener,noreferrer");
+      setIsConnecting(false);
+      setIsMenuOpen(false);
+    }, 600);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800">
       <div className="container mx-auto px-4 py-4">
@@ -32,10 +45,8 @@ const Header = () => {
             />
           </Link>
 
-
-
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-2">
+          <nav className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -49,9 +60,27 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
+            
+            {/* CRM Login - Desktop */}
+            <button 
+              onClick={handleCRMClick}
+              disabled={isConnecting}
+              className="flex items-center justify-center gap-2 py-2 px-4 text-sm font-medium transition-all duration-300 rounded-full text-white hover:bg-emerald-500/20 border border-emerald-500/30 disabled:opacity-70"
+            >
+              {isConnecting ? (
+                <>
+                  <Loader2 className="h-3 w-3 animate-spin" />
+                  Connecting...
+                </>
+              ) : (
+                <>
+                  CRM Login <ExternalLink className="h-3 w-3 opacity-50" />
+                </>
+              )}
+            </button>
           </nav>
 
-          {/* CTA Button */}
+          {/* Right side Logo & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/" className="flex items-center space-x-2 group">
               <img
@@ -68,7 +97,6 @@ const Header = () => {
             </Link>
           </div>
 
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -81,7 +109,7 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-800">
-            <nav className="flex flex-col space-y-4 pt-4">
+            <nav className="flex flex-col space-y-3 pt-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -96,10 +124,22 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
+
+              {/* CRM Login - Mobile */}
+              <button 
+                onClick={handleCRMClick}
+                disabled={isConnecting}
+                className="flex items-center justify-center gap-2 text-sm font-medium transition-colors duration-300 text-white bg-white/5 hover:bg-emerald-500 rounded-full py-3 px-4 text-center border border-emerald-500/50"
+              >
+                {isConnecting ? (
+                  <Loader2 className="h-4 w-4 animate-spin text-emerald-400" />
+                ) : "CRM Login"}
+              </button>
+
               <Link
                 to="/courses"
                 onClick={() => setIsMenuOpen(false)}
-                className="mt-4 px-6 py-2 bg-gradient-to-r from-emerald-500 to-green-400 text-white rounded-full font-medium text-center hover:from-emerald-600 hover:to-green-500 transition-all duration-300"
+                className="mt-2 px-6 py-2 bg-gradient-to-r from-emerald-500 to-green-400 text-white rounded-full font-medium text-center hover:from-emerald-600 hover:to-green-500 transition-all duration-300"
               >
                 Get Started
               </Link>
